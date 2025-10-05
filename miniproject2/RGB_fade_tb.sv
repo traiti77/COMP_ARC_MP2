@@ -7,17 +7,17 @@ module RGB_fade_tb;
     parameter PWM_INTERVAL = 1200;     // CLK freq is 12MHz, so 1200 cycles is 100us
 
     logic    clk = 0;
-    logic    red;
-    logic    green;
-    logic    blue;
+    logic    RGB_R;
+    logic    RGB_G;
+    logic    RGB_B;
 
     top # (
         .PWM_INTERVAL   (PWM_INTERVAL)
     ) u0 (
         .clk            (clk), 
-        .red            (red),
-        .green          (green),
-        .blue           (blue)
+        .RGB_R            (RGB_R),
+        .RGB_G          (RGB_G),
+        .RGB_B           (RGB_B)
     );
 // sets up simulation and determines when it terminates
     initial begin
